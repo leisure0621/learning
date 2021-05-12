@@ -1,0 +1,1053 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>08、Bean的自動裝配 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../09、Spring使用註解開發/09、Spring使用註解開發.html" />
+    
+    
+    <link rel="prev" href="../07、Bean的作用域/07、Bean的作用域.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    【狂神说Java】Spring5最新完整教程IDEA版通俗易懂
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../01、Spring的簡介組成與拓展/01、Spring的簡介組成與拓展.html">
+            
+                <a href="../01、Spring的簡介組成與拓展/01、Spring的簡介組成與拓展.html">
+            
+                    
+                    01、Spring的簡介組成與拓展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../02、IOC理論與推導/02、IOC理論與推導.html">
+            
+                <a href="../02、IOC理論與推導/02、IOC理論與推導.html">
+            
+                    
+                    02、IOC理論與推導
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../03、HelloSpring/03、HelloSpring.html">
+            
+                <a href="../03、HelloSpring/03、HelloSpring.html">
+            
+                    
+                    03、HelloSpring
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../04、IOC創建對象方式/04、IOC創建對象方式.html">
+            
+                <a href="../04、IOC創建對象方式/04、IOC創建對象方式.html">
+            
+                    
+                    04、IOC創建對象方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../05、Spring配置說明/05、Spring配置說明.html">
+            
+                <a href="../05、Spring配置說明/05、Spring配置說明.html">
+            
+                    
+                    05、Spring配置說明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../06、DI依賴注入環境/06、DI依賴注入環境.html">
+            
+                <a href="../06、DI依賴注入環境/06、DI依賴注入環境.html">
+            
+                    
+                    06、DI依賴注入環境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../07、Bean的作用域/07、Bean的作用域.html">
+            
+                <a href="../07、Bean的作用域/07、Bean的作用域.html">
+            
+                    
+                    07、Bean的作用域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.8" data-path="08、Bean的自動裝配.html">
+            
+                <a href="08、Bean的自動裝配.html">
+            
+                    
+                    08、Bean的自動裝配
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../09、Spring使用註解開發/09、Spring使用註解開發.html">
+            
+                <a href="../09、Spring使用註解開發/09、Spring使用註解開發.html">
+            
+                    
+                    09、Spring使用註解開發
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../10、代理模式/10、代理模式.html">
+            
+                <a href="../10、代理模式/10、代理模式.html">
+            
+                    
+                    10、代理模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >08、Bean的自動裝配</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x76EE;&#x9304;">&#x76EE;&#x9304;</h1>
+
+<ul>
+<li>8&#x3001;<a href="#s1">Bean&#x7684;&#x81EA;&#x52D5;&#x88DD;&#x914D;</a><ul>
+<li>8-4&#x3001;<a href="#s2">&#x4F7F;&#x7528;&#x8A3B;&#x89E3;&#x5BE6;&#x73FE;&#x81EA;&#x52D5;&#x88DD;&#x914D;</a><ul>
+<li>8-4-1&#x3001;<a href="#s3">@Autowired</a></li>
+<li>8-4-2&#x3001;<a href="#s4">@Autowired(required = false)</a></li>
+<li>8-5-3&#x3001;<a href="#s5">@Autowired &#x914D;&#x5408; @Qualifier</a></li>
+<li>8-5-4&#x3001;<a href="#s6">@Nullable</a></li>
+<li>8-5-5&#x3001;<a href="#s7">@Resource</a></li>
+<li>8-5-6&#x3001;<a href="#s8">&#x8A3B;&#x89E3;&#x5BE6;&#x73FE;&#x81EA;&#x52D5;&#x88DD;&#x914D;&#x7E3D;&#x7D50;</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="8&#x3001;bean&#x7684;&#x81EA;&#x52D5;&#x88DD;&#x914D;">8&#x3001;Bean&#x7684;&#x81EA;&#x52D5;&#x88DD;&#x914D;<span id="s1"></span></h1>
+<ul>
+<li><strong>&#x81EA;&#x52D5;&#x88DD;&#x914D;&#x662F; Spring &#x6EFF;&#x8DB3; bean &#x4F9D;&#x8CF4;&#x7684;&#x4E00;&#x7A2E;&#x65B9;&#x5F0F;!</strong></li>
+<li><strong>Spring &#x6703;&#x5728;&#x4E0A;&#x4E0B;&#x6587;&#x4E2D;&#x81EA;&#x52D5;&#x5C0B;&#x627E;&#xFF0C;&#x4E26;&#x81EA;&#x52D5;&#x7D66; bean &#x88DD;&#x914D;&#x5C6C;&#x6027;!</strong></li>
+<li><p><strong>&#x5728; Spring &#x4E2D;&#x6709;&#x4E09;&#x7A2E;&#x88DD;&#x914D;&#x7684;&#x65B9;&#x5F0F;</strong> (<a href="doc/spring-05-autowired.zip">&#x7BC4;&#x4F8B;&#x4E0B;&#x8F09;</a>)</p>
+<ol>
+<li>&#x5728; xml &#x4E2D;&#x986F;&#x793A;&#x7684;&#x914D;&#x7F6E;</li>
+<li>&#x5728; java &#x4E2D;&#x986F;&#x793A;&#x914D;&#x7F6E;</li>
+<li>&#x96B1;&#x5F0F;&#x7684;&#x81EA;&#x52D5;&#x88DD;&#x914D; bean &#x3010;&#x91CD;&#x8981;!&#x3011;</li>
+</ol>
+</li>
+<li><p><strong>&#x76EE;&#x9304;</strong></p>
+</li>
+</ul>
+<p><img src="image/01.dio.svg"></p>
+<ul>
+<li><strong>Cat.java</strong></li>
+</ul>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.kuang.pojo;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Cat</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">shout</span><span class="hljs-params">()</span></span>{
+        System.out.println(<span class="hljs-string">&quot;miao&quot;</span>);
+    }
+}
+</code></pre>
+<ul>
+<li><strong>Dog.java</strong></li>
+</ul>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.kuang.pojo;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dog</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">shout</span><span class="hljs-params">()</span></span>{
+        System.out.println(<span class="hljs-string">&quot;wang&quot;</span>);
+    }
+}
+</code></pre>
+<ul>
+<li><strong>people.java</strong></li>
+</ul>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.kuang.pojo;
+
+<span class="hljs-keyword">import</span> org.springframework.beans.factory.annotation.Autowired;
+<span class="hljs-keyword">import</span> org.springframework.beans.factory.annotation.Qualifier;
+<span class="hljs-keyword">import</span> org.springframework.lang.Nullable;
+
+<span class="hljs-keyword">import</span> javax.annotation.Resource;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">People</span> </span>{
+
+    <span class="hljs-keyword">private</span> Cat cat;
+    <span class="hljs-keyword">private</span> Dog dog;
+    <span class="hljs-keyword">private</span> String name;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">People</span><span class="hljs-params">()</span> </span>{}
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> Cat <span class="hljs-title">getCat</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> cat;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> Dog <span class="hljs-title">getDog</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> dog;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getName</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> name;
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;People{&quot;</span> +
+                <span class="hljs-string">&quot;cat=&quot;</span> + cat +
+                <span class="hljs-string">&quot;, dog=&quot;</span> + dog +
+                <span class="hljs-string">&quot;, name=&apos;&quot;</span> + name + <span class="hljs-string">&apos;\&apos;&apos;</span> +
+                <span class="hljs-string">&apos;}&apos;</span>;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setName</span><span class="hljs-params">(String name)</span> </span>{
+        <span class="hljs-keyword">this</span>.name = name;
+    }
+}
+</code></pre>
+<ul>
+<li><strong>beans.xml&#xFF0C;<span style="color:red">ByName &#x81EA;&#x52D5;&#x88DD;&#x914D;</span></strong></li>
+</ul>
+<pre><code class="lang-xml"><span class="php"><span class="hljs-meta">&lt;?</span>xml version=<span class="hljs-string">&quot;1.0&quot;</span> encoding=<span class="hljs-string">&quot;UTF-8&quot;</span><span class="hljs-meta">?&gt;</span></span>
+<span class="hljs-tag">&lt;<span class="hljs-name">beans</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">&quot;http://www.springframework.org/schema/beans&quot;</span>
+       <span class="hljs-attr">xmlns:xsi</span>=<span class="hljs-string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+       <span class="hljs-attr">xmlns:context</span>=<span class="hljs-string">&quot;http://www.springframework.org/schema/context&quot;</span>
+       <span class="hljs-attr">xmlns:aop</span>=<span class="hljs-string">&quot;http://www.springframework.org/schema/aop&quot;</span>
+       <span class="hljs-attr">xsi:schemaLocation</span>=<span class="hljs-string">&quot;http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd&quot;</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- &#x958B;&#x555F;&#x8A3B;&#x89E3;&#x7684;&#x652F;&#x6301; --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">context:annotation-config</span>/&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">bean</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;cat&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;com.kuang.pojo.Cat&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">bean</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;dog&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;com.kuang.pojo.Dog&quot;</span>/&gt;</span>
+
+    <span class="hljs-comment">&lt;!--
+        byName: &#x6703;&#x81EA;&#x52D5;&#x5728;&#x5BB9;&#x5668;&#x4E0A;&#x4E0B;&#x6587;&#x4E2D;&#x67E5;&#x627E;&#xFF0C;&#x548C;&#x81EA;&#x5DF1;&#x5C0D;&#x5411; set &#x65B9;&#x6CD5;&#x5F8C;&#x9762;&#x7684;&#x503C;&#x5C0D;&#x61C9;&#x7684; beanid ! id &#x4E0D;&#x53EF;&#x7701;&#x7565; !
+
+        // &#x6709; dog &#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x8207;&#x4E0A;&#x65B9;&#x7684; dog &#x505A;&#x5C0D;&#x61C9;
+        public void setDog(Dog dog) {
+            this.dog = dog;
+        }
+    --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">bean</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;people&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;com.kuang.pojo.People&quot;</span> <span class="hljs-attr">autowire</span>=<span class="hljs-string">&quot;byName&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;name&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;&#x5C0F;&#x72C2;&#x795E;&#x5440;&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">bean</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">beans</span>&gt;</span>
+</code></pre>
+<ul>
+<li><strong>beans2.xml&#xFF0C;<span style="color:red">ByType &#x81EA;&#x52D5;&#x88DD;&#x914D;</span></strong></li>
+</ul>
+<pre><code class="lang-xml"><span class="php"><span class="hljs-meta">&lt;?</span>xml version=<span class="hljs-string">&quot;1.0&quot;</span> encoding=<span class="hljs-string">&quot;UTF-8&quot;</span><span class="hljs-meta">?&gt;</span></span>
+<span class="hljs-tag">&lt;<span class="hljs-name">beans</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">&quot;http://www.springframework.org/schema/beans&quot;</span>
+       <span class="hljs-attr">xmlns:xsi</span>=<span class="hljs-string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+       <span class="hljs-attr">xmlns:context</span>=<span class="hljs-string">&quot;http://www.springframework.org/schema/context&quot;</span>
+       <span class="hljs-attr">xmlns:aop</span>=<span class="hljs-string">&quot;http://www.springframework.org/schema/aop&quot;</span>
+       <span class="hljs-attr">xsi:schemaLocation</span>=<span class="hljs-string">&quot;http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd&quot;</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- &#x958B;&#x555F;&#x8A3B;&#x89E3;&#x7684;&#x652F;&#x6301; --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">context:annotation-config</span>/&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">bean</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;cat&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;com.kuang.pojo.Cat&quot;</span>/&gt;</span>
+    <span class="hljs-comment">&lt;!-- &#x4E0D;&#x53EF;&#x6709;&#x8907;&#x6578; com.kuang.pojo.Dog --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">bean</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;com.kuang.pojo.Dog&quot;</span>/&gt;</span>
+
+    <span class="hljs-comment">&lt;!--
+        byType: &#x6703;&#x81EA;&#x52D5;&#x5728;&#x5BB9;&#x5668;&#x4E0A;&#x4E0B;&#x6587;&#x4E2D;&#x67E5;&#x627E;&#xFF0C;&#x548C;&#x81EA;&#x5DF1;&#x5C0D;&#x5411; &#x5C6C;&#x6027;&#x985E;&#x578B;&#x76F8;&#x540C;&#x7684; bean ! &#x4F46;&#x9808;&#x5168;&#x5C40;&#x552F;&#x4E00; ! &#x4E14; id &#x53EF;&#x7701;&#x7565; !
+
+        // &#x6709; Dog &#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x8207;&#x4E0A;&#x65B9;&#x7684; com.kuang.pojo.Dog &#x505A;&#x5C0D;&#x61C9;
+        public void setDog(Dog dog) {
+            this.dog = dog;
+        }
+    --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">bean</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;people&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;com.kuang.pojo.People&quot;</span> <span class="hljs-attr">autowire</span>=<span class="hljs-string">&quot;byType&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;name&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;&#x5C0F;&#x72C2;&#x795E;&#x5440;&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">bean</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">beans</span>&gt;</span>
+</code></pre>
+<ul>
+<li><strong>MyTest.java</strong></li>
+</ul>
+<pre><code class="lang-java"><span class="hljs-keyword">import</span> org.junit.Test;
+<span class="hljs-keyword">import</span> org.springframework.context.ApplicationContext;
+<span class="hljs-keyword">import</span> org.springframework.context.support.ClassPathXmlApplicationContext;
+<span class="hljs-keyword">import</span> com.kuang.pojo.People;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyTest</span> </span>{
+    <span class="hljs-meta">@Test</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">test1</span><span class="hljs-params">()</span></span>{
+        ApplicationContext context = <span class="hljs-keyword">new</span> ClassPathXmlApplicationContext(<span class="hljs-string">&quot;beans.xml&quot;</span>);
+        People people = context.getBean(<span class="hljs-string">&quot;people&quot;</span>, People.class);
+        System.out.println(people.toString());
+    }
+
+    <span class="hljs-meta">@Test</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">test2</span><span class="hljs-params">()</span></span>{
+        ApplicationContext context = <span class="hljs-keyword">new</span> ClassPathXmlApplicationContext(<span class="hljs-string">&quot;beans2.xml&quot;</span>);
+        People people = context.getBean(<span class="hljs-string">&quot;people&quot;</span>, People.class);
+        System.out.println(people.toString());
+    }
+}
+</code></pre>
+<blockquote>
+<p>byName &#x7684;&#x6642;&#x5019;&#xFF0C;&#x9700;&#x8981;&#x4FDD;&#x8B49;<strong>&#x6240;&#x6709; bean &#x7684; id &#x552F;&#x4E00;</strong>&#xFF0C;&#x4E26;&#x4E14;&#x9019;&#x500B; bean &#x9700;&#x8981;&#x548C;&#x81EA;&#x52D5;&#x6CE8;&#x5165;&#x7684;<strong>&#x5C6C;&#x6027;&#x7684; set &#x65B9;&#x6CD5;&#x7684;&#x503C;</strong>&#x4E00;&#x81F4; !
+byType &#x7684;&#x6642;&#x5019;&#xFF0C;&#x9700;&#x8981;&#x4FDD;&#x8B49;<strong>&#x6240;&#x6709; bean &#x7684; class &#x552F;&#x4E00;</strong>&#xFF0C;&#x4E26;&#x4E14;&#x9019;&#x500B; bean &#x9700;&#x8981;&#x548C;&#x81EA;&#x52D5;&#x6CE8;&#x5165;&#x7684;<strong>&#x5C6C;&#x6027;&#x7684;&#x985E;&#x578B;</strong>&#x4E00;&#x81F4; !</p>
+</blockquote>
+<h2 id="8-4&#x3001;&#x4F7F;&#x7528;&#x8A3B;&#x89E3;&#x5BE6;&#x73FE;&#x81EA;&#x52D5;&#x88DD;&#x914D;">8-4&#x3001;&#x4F7F;&#x7528;&#x8A3B;&#x89E3;&#x5BE6;&#x73FE;&#x81EA;&#x52D5;&#x88DD;&#x914D;<span id="s2"></span></h2>
+<ul>
+<li><strong>&#x5B98;&#x65B9;&#x8AAA;&#x660E;</strong>: <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#beans-annotation-config" target="_blank">Annotation-based Container Configuration</a></li>
+<li>jdk1.5 &#x652F;&#x6301;&#x7684;&#x8A3B;&#x89E3;&#xFF0C;Spring2.5&#x5C31;&#x652F;&#x6301;&#x8A3B;&#x89E3;&#x4E86; ! </li>
+<li>The introduction of annotation-based configuration raised the question of whether this approach is &#x201C;better&#x201D; than XML.</li>
+<li><strong>&#x8981;&#x4F7F;&#x7528;&#x8A3B;&#x89E3;&#x9808;&#x77E5;</strong>:<ul>
+<li><strong>&#x5C0E;&#x5165;&#x7D04;&#x675F;</strong>: context</li>
+<li><strong>&#x914D;&#x7F6E;&#x8A3B;&#x89E3;&#x7684;&#x652F;&#x6301;</strong>: context:annotation-config &#x3010;&#x91CD;&#x8981;&#x3011;</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-xml"><span class="php"><span class="hljs-meta">&lt;?</span>xml version=<span class="hljs-string">&quot;1.0&quot;</span> encoding=<span class="hljs-string">&quot;UTF-8&quot;</span><span class="hljs-meta">?&gt;</span></span>
+<span class="hljs-tag">&lt;<span class="hljs-name">beans</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">&quot;http://www.springframework.org/schema/beans&quot;</span>
+    <span class="hljs-attr">xmlns:xsi</span>=<span class="hljs-string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+    <span class="hljs-attr">xmlns:context</span>=<span class="hljs-string">&quot;http://www.springframework.org/schema/context&quot;</span>
+    <span class="hljs-attr">xsi:schemaLocation</span>=<span class="hljs-string">&quot;http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd&quot;</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">context:annotation-config</span>/&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">beans</span>&gt;</span>
+</code></pre>
+<ul>
+<li><strong>@Autowired &#x76F4;&#x63A5;&#x5728;&#x5C6C;&#x6027;&#x4E0A;&#x4F7F;&#x7528;&#x5373;&#x53EF; ! &#x4E5F;&#x53EF;&#x4EE5;&#x5728; set &#x65B9;&#x5F0F;&#x4E0A;&#x4F7F;&#x7528; !</strong></li>
+<li><strong>&#x4F7F;&#x7528; Autowired &#x6211;&#x5011;&#x53EF;&#x4EE5;&#x4E0D;&#x7528;&#x7DE8;&#x5BEB; Set &#x65B9;&#x6CD5;&#x4E86;&#xFF0C;&#x524D;&#x63D0;&#x662F;&#x4F60;&#x9019;&#x500B;&#x81EA;&#x52D5;&#x88DD;&#x914D;&#x7684;&#x5C6C;&#x6027;&#x5728; IOC (Spring) &#x5BB9;&#x5668;&#x4E2D;&#x5B58;&#x5728;&#xFF0C;&#x4E14;&#x7B26;&#x5408;&#x540D;&#x5B50; byName!</strong></li>
+</ul>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">People</span> </span>{
+
+    <span class="hljs-meta">@Autowired</span>
+    <span class="hljs-keyword">private</span> Cat cat;
+    <span class="hljs-meta">@Autowired</span>
+    <span class="hljs-keyword">private</span> Dog dog;
+
+}
+</code></pre>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">bean</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;cat&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;com.kuang.pojo.Cat&quot;</span>/&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">bean</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;dog&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;com.kuang.pojo.Dog&quot;</span>/&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">bean</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;people&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;com.kuang.pojo.People&quot;</span>/&gt;</span>
+</code></pre>
+<ul>
+<li><strong>@Nullable &#x5B57;&#x6BB5;&#x6A19;&#x8A18;&#x4E86;&#x9019;&#x500B;&#x8A3B;&#x89E3;&#xFF0C;&#x8AAA;&#x660E;&#x9019;&#x500B;&#x5B57;&#x6BB5;&#x53EF;&#x4EE5;&#x70BA; null</strong></li>
+</ul>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">People</span> </span>{
+
+    <span class="hljs-keyword">private</span> Cat cat;
+    <span class="hljs-keyword">private</span> Dog dog;
+    <span class="hljs-keyword">private</span> String name;
+
+    <span class="hljs-comment">// &#x8868;&#x793A;&#x53EF;&#x4EE5;&#x7A7A;&#x503C;</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">People</span><span class="hljs-params">(@Nullable String name)</span> </span>{
+        <span class="hljs-keyword">this</span>.name = name;
+    }
+
+}
+</code></pre>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">bean</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;people&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;com.kuang.pojo.People&quot;</span>/&gt;</span>
+</code></pre>
+<ul>
+<li><strong>&#x5982;&#x679C;&#x4F7F;&#x7528; @Autowired &#x81EA;&#x52D5;&#x88DD;&#x914D;&#x7684;&#x74B0;&#x5883;&#x6BD4;&#x8F03;&#x8907;&#x96DC;&#xFF0C;&#x81EA;&#x52D5;&#x88DD;&#x914D;&#x7121;&#x6CD5;&#x901A;&#x904E;&#x4E00;&#x500B;&#x8A3B;&#x89E3; &#x3010;@Autowired&#x3011; &#x5B8C;&#x6210;&#x7684;&#x6642;&#x5019;&#xFF0C;&#x6211;&#x5011;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; @Qualifier(value=&quot;xxx&quot;) &#x53BB;&#x914D;&#x5408; @Autowired &#x7684;&#x4F7F;&#x7528;&#xFF0C;&#x6307;&#x5B9A;&#x4E00;&#x500B;&#x552F;&#x4E00;&#x7684; bean &#x5C0D;&#x8C61;&#x6CE8;&#x5165; !</strong></li>
+</ul>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">People</span> </span>{
+
+    <span class="hljs-comment">// &#x5982;&#x679C;&#x986F;&#x793A;&#x5B9A;&#x7FA9;&#x4E86; Autowired &#x7684; required &#x5C6C;&#x6027;&#x70BA; false&#xFF0C;&#x8AAA;&#x660E;&#x9019;&#x500B;&#x5C0D;&#x8C61;&#x53EF;&#x4EE5;&#x70BA; null&#xFF0C;&#x5426;&#x5247;&#x4E0D;&#x5141;&#x8A31;&#x70BA;&#x7A7A;</span>
+    <span class="hljs-meta">@Autowired</span>(required = <span class="hljs-keyword">false</span>)
+    <span class="hljs-keyword">private</span> Cat cat;
+    <span class="hljs-meta">@Autowired</span>
+    <span class="hljs-meta">@Qualifier</span>(value=<span class="hljs-string">&quot;dog2&quot;</span>)
+    <span class="hljs-keyword">private</span> Dog dog;
+
+}
+</code></pre>
+<pre><code class="lang-xml">    <span class="hljs-tag">&lt;<span class="hljs-name">bean</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;dog2&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;com.kuang.pojo.Dog&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">bean</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;people&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;com.kuang.pojo.People&quot;</span>/&gt;</span>
+</code></pre>
+<ul>
+<li><strong>@Resource &#x548C; @Autowired &#x7684;&#x5340;&#x5225;:</strong><ul>
+<li><strong>&#x90FD;&#x662F;&#x7528;&#x4F86;&#x81EA;&#x52D5;&#x88DD;&#x914D;&#x7684;&#xFF0C;&#x90FD;&#x53EF;&#x4EE5;&#x653E;&#x5728;&#x5C6C;&#x6027;</strong></li>
+<li><strong>@Autowired &#x901A;&#x904E; byType &#x7684;&#x65B9;&#x5F0F;&#x5BE6;&#x73FE;&#xFF0C;&#x800C;&#x4E14;&#x5FC5;&#x9808;&#x8981;&#x6C42;&#x9019;&#x500B;&#x5C0D;&#x8C61;&#x5B58;&#x5728;!&#x3010;&#x5E38;&#x7528;&#x3011;</strong></li>
+<li><strong>@Resource &#x9ED8;&#x8A8D;&#x901A;&#x904E; byName &#x7684;&#x65B9;&#x5F0F;&#x5BE6;&#x73FE;&#xFF0C;&#x5982;&#x679C;&#x627E;&#x4E0D;&#x5230;&#x540D;&#x5B57;&#x5247;&#x901A;&#x904E; byType &#x5BE6;&#x73FE;! &#x5982;&#x679C;&#x5169;&#x500B;&#x90FD;&#x627E;&#x4E0D;&#x5230;&#x7684;&#x60C5;&#x6CC1;&#x4E0B;&#xFF0C;&#x5C31;&#x5831;&#x932F;!&#x3010;&#x5E38;&#x7528;&#x3011;</strong></li>
+<li><strong>&#x57F7;&#x884C;&#x9806;&#x5E8F;: @Autowired &#x901A;&#x904E; byType&#xFF0C;@Resource &#x9ED8;&#x8A8D;&#x901A;&#x904E; byName</strong></li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">People</span> </span>{
+    <span class="hljs-meta">@Resource</span>(name = <span class="hljs-string">&quot;cat1&quot;</span>)
+    <span class="hljs-keyword">private</span> Cat cat;
+    <span class="hljs-meta">@Resource</span>
+    <span class="hljs-keyword">private</span> Dog dog;
+}
+</code></pre>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">bean</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;cat&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;com.kuang.pojo.Cat&quot;</span>/&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">bean</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;dog&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;com.kuang.pojo.Dog&quot;</span>/&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">bean</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;people&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;com.kuang.pojo.People&quot;</span>/&gt;</span>
+</code></pre>
+<h3 id="8-4-1&#x3001;autowired">8-4-1&#x3001;@Autowired<span id="s3"></span></h3>
+<ul>
+<li><strong>&#x4FEE;&#x6539; beans.xml</strong></li>
+</ul>
+<pre><code class="lang-xml"><span class="php"><span class="hljs-meta">&lt;?</span>xml version=<span class="hljs-string">&quot;1.0&quot;</span> encoding=<span class="hljs-string">&quot;UTF-8&quot;</span><span class="hljs-meta">?&gt;</span></span>
+<span class="hljs-tag">&lt;<span class="hljs-name">beans</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">&quot;http://www.springframework.org/schema/beans&quot;</span>
+    <span class="hljs-attr">xmlns:xsi</span>=<span class="hljs-string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+    <span class="hljs-attr">xmlns:context</span>=<span class="hljs-string">&quot;http://www.springframework.org/schema/context&quot;</span>
+    <span class="hljs-attr">xsi:schemaLocation</span>=<span class="hljs-string">&quot;http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd&quot;</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- &#x958B;&#x555F;&#x8A3B;&#x89E3;&#x7684;&#x652F;&#x6301; --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">context:annotation-config</span>/&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">bean</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;cat&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;com.kuang.pojo.Cat&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">bean</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;dog&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;com.kuang.pojo.Dog&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">bean</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;people&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;com.kuang.pojo.People&quot;</span>/&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">beans</span>&gt;</span>
+</code></pre>
+<ul>
+<li><strong>&#x4FEE;&#x6539; People.java</strong> (@Autowired &#x4E5F;&#x53EF;&#x4EE5;&#x5728; set &#x65B9;&#x5F0F;&#x4E0A;&#x4F7F;&#x7528;&#xFF0C;&#x4F46;&#x914D;&#x7F6E;&#x4E0A; Autowired &#x5F8C;&#x5C31;&#x53EF;&#x4EE5;&#x4E0D;&#x7528;&#x5BEB; set &#x4E86;)</li>
+</ul>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.kuang.pojo;
+
+<span class="hljs-keyword">import</span> org.springframework.beans.factory.annotation.Autowired;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">People</span> </span>{
+
+    <span class="hljs-meta">@Autowired</span>
+    <span class="hljs-keyword">private</span> Cat cat;
+    <span class="hljs-meta">@Autowired</span>
+    <span class="hljs-keyword">private</span> Dog dog;
+    <span class="hljs-keyword">private</span> String name;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> Cat <span class="hljs-title">getCat</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> cat;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> Dog <span class="hljs-title">getDog</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> dog;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getName</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> name;
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;People{&quot;</span> +
+                <span class="hljs-string">&quot;cat=&quot;</span> + cat +
+                <span class="hljs-string">&quot;, dog=&quot;</span> + dog +
+                <span class="hljs-string">&quot;, name=&apos;&quot;</span> + name + <span class="hljs-string">&apos;\&apos;&apos;</span> +
+                <span class="hljs-string">&apos;}&apos;</span>;
+    }
+}
+</code></pre>
+<h3 id="8-4-2&#x3001;autowiredrequired--false-">8-4-2&#x3001;@Autowired(required = false) <span id="s4"></span></h3>
+<ul>
+<li><strong>People.java &#x4FEE;&#x6539;</strong></li>
+</ul>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.kuang.pojo;
+
+<span class="hljs-keyword">import</span> org.springframework.beans.factory.annotation.Autowired;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">People</span> </span>{
+
+    <span class="hljs-comment">// &#x5982;&#x679C;&#x986F;&#x793A;&#x5B9A;&#x7FA9;&#x4E86; Autowired &#x7684; required &#x5C6C;&#x6027;&#x70BA; false&#xFF0C;&#x8AAA;&#x660E;&#x9019;&#x500B;&#x5C0D;&#x8C61;&#x53EF;&#x4EE5;&#x70BA; null&#xFF0C;&#x5426;&#x5247;&#x4E0D;&#x5141;&#x8A31;&#x70BA;&#x7A7A;</span>
+    <span class="hljs-meta">@Autowired</span>(required = <span class="hljs-keyword">false</span>)
+    <span class="hljs-keyword">private</span> Cat cat;
+    <span class="hljs-meta">@Autowired</span>
+    <span class="hljs-keyword">private</span> Dog dog;
+    <span class="hljs-keyword">private</span> String name;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> Cat <span class="hljs-title">getCat</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> cat;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> Dog <span class="hljs-title">getDog</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> dog;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getName</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> name;
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;People{&quot;</span> +
+                <span class="hljs-string">&quot;cat=&quot;</span> + cat +
+                <span class="hljs-string">&quot;, dog=&quot;</span> + dog +
+                <span class="hljs-string">&quot;, name=&apos;&quot;</span> + name + <span class="hljs-string">&apos;\&apos;&apos;</span> +
+                <span class="hljs-string">&apos;}&apos;</span>;
+    }
+}
+</code></pre>
+<ul>
+<li><strong>beans2.xml &#x8A2D;&#x5B9A;</strong></li>
+</ul>
+<pre><code class="lang-xml"><span class="php"><span class="hljs-meta">&lt;?</span>xml version=<span class="hljs-string">&quot;1.0&quot;</span> encoding=<span class="hljs-string">&quot;UTF-8&quot;</span><span class="hljs-meta">?&gt;</span></span>
+<span class="hljs-tag">&lt;<span class="hljs-name">beans</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">&quot;http://www.springframework.org/schema/beans&quot;</span>
+       <span class="hljs-attr">xmlns:xsi</span>=<span class="hljs-string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+       <span class="hljs-attr">xmlns:context</span>=<span class="hljs-string">&quot;http://www.springframework.org/schema/context&quot;</span>
+       <span class="hljs-attr">xmlns:aop</span>=<span class="hljs-string">&quot;http://www.springframework.org/schema/aop&quot;</span>
+       <span class="hljs-attr">xsi:schemaLocation</span>=<span class="hljs-string">&quot;http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd&quot;</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- &#x958B;&#x555F;&#x8A3B;&#x89E3;&#x7684;&#x652F;&#x6301; --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">context:annotation-config</span>/&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">bean</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;dog&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;com.kuang.pojo.Dog&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">bean</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;people&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;com.kuang.pojo.People&quot;</span>/&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">beans</span>&gt;</span>
+</code></pre>
+<ul>
+<li><strong>MyTest.java &#x4FEE;&#x6539;</strong></li>
+</ul>
+<pre><code class="lang-java"><span class="hljs-keyword">import</span> org.junit.Test;
+<span class="hljs-keyword">import</span> org.springframework.context.ApplicationContext;
+<span class="hljs-keyword">import</span> org.springframework.context.support.ClassPathXmlApplicationContext;
+<span class="hljs-keyword">import</span> com.kuang.pojo.People;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyTest</span> </span>{
+    <span class="hljs-meta">@Test</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">test2</span><span class="hljs-params">()</span></span>{
+        ApplicationContext context = <span class="hljs-keyword">new</span> ClassPathXmlApplicationContext(<span class="hljs-string">&quot;beans2.xml&quot;</span>);
+        People people = context.getBean(<span class="hljs-string">&quot;people&quot;</span>, People.class);
+        people.getDog().shout();
+        people.getCat().shout();
+    }
+}
+</code></pre>
+<ul>
+<li><strong>&#x6E2C;&#x8A66;&#x7D50;&#x679C;</strong></li>
+</ul>
+<pre><code class="lang-cs">People{cat=<span class="hljs-keyword">null</span>, dog=com.kuang.pojo.Dog@<span class="hljs-number">64</span>d2d351, name=<span class="hljs-string">&apos;null&apos;</span>}
+</code></pre>
+<h3 id="8-5-3&#x3001;autowired-&#x914D;&#x5408;-qualifier-">8-5-3&#x3001;@Autowired &#x914D;&#x5408; @Qualifier <span id="s5"></span></h3>
+<ul>
+<li><strong>&#x4FEE;&#x6539; beans.xml</strong></li>
+</ul>
+<pre><code class="lang-xml"><span class="php"><span class="hljs-meta">&lt;?</span>xml version=<span class="hljs-string">&quot;1.0&quot;</span> encoding=<span class="hljs-string">&quot;UTF-8&quot;</span><span class="hljs-meta">?&gt;</span></span>
+<span class="hljs-tag">&lt;<span class="hljs-name">beans</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">&quot;http://www.springframework.org/schema/beans&quot;</span>
+    <span class="hljs-attr">xmlns:xsi</span>=<span class="hljs-string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+    <span class="hljs-attr">xmlns:context</span>=<span class="hljs-string">&quot;http://www.springframework.org/schema/context&quot;</span>
+    <span class="hljs-attr">xsi:schemaLocation</span>=<span class="hljs-string">&quot;http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd&quot;</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- &#x958B;&#x555F;&#x8A3B;&#x89E3;&#x7684;&#x652F;&#x6301; --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">context:annotation-config</span>/&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">bean</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;cat&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;com.kuang.pojo.Cat&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">bean</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;dog&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;com.kuang.pojo.Dog&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">bean</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;dog2&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;com.kuang.pojo.Dog&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">bean</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;people&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;com.kuang.pojo.People&quot;</span>/&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">beans</span>&gt;</span>
+</code></pre>
+<ul>
+<li><strong>People.java &#x4FEE;&#x6539;</strong></li>
+</ul>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.kuang.pojo;
+
+<span class="hljs-keyword">import</span> org.springframework.beans.factory.annotation.Autowired;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">People</span> </span>{
+
+
+    <span class="hljs-meta">@Autowired</span>
+    <span class="hljs-keyword">private</span> Cat cat;
+    <span class="hljs-meta">@Autowired</span>
+    <span class="hljs-meta">@Qualifier</span>(value=<span class="hljs-string">&quot;dog2&quot;</span>)
+    <span class="hljs-keyword">private</span> Dog dog;
+    <span class="hljs-keyword">private</span> String name;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> Cat <span class="hljs-title">getCat</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> cat;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> Dog <span class="hljs-title">getDog</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> dog;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getName</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> name;
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;People{&quot;</span> +
+                <span class="hljs-string">&quot;cat=&quot;</span> + cat +
+                <span class="hljs-string">&quot;, dog=&quot;</span> + dog +
+                <span class="hljs-string">&quot;, name=&apos;&quot;</span> + name + <span class="hljs-string">&apos;\&apos;&apos;</span> +
+                <span class="hljs-string">&apos;}&apos;</span>;
+    }
+}
+</code></pre>
+<h3 id="8-5-4&#x3001;nullable-">8-5-4&#x3001;@Nullable <span id="s6"></span></h3>
+<ul>
+<li><strong>People.java&#xFF0C;@Nullable &#x7A7A;&#x503C;&#x8A2D;&#x5B9A;</strong></li>
+</ul>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.kuang.pojo;
+
+<span class="hljs-keyword">import</span> org.springframework.beans.factory.annotation.Autowired;
+<span class="hljs-keyword">import</span> org.springframework.lang.Nullable;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">People</span> </span>{
+
+    <span class="hljs-keyword">private</span> Cat cat;
+    <span class="hljs-keyword">private</span> Dog dog;
+    <span class="hljs-keyword">private</span> String name;
+
+    <span class="hljs-comment">// &#x8868;&#x793A;&#x53EF;&#x4EE5;&#x7A7A;&#x503C;</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">People</span><span class="hljs-params">(@Nullable String name)</span> </span>{
+        <span class="hljs-keyword">this</span>.name = name;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> Cat <span class="hljs-title">getCat</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> cat;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> Dog <span class="hljs-title">getDog</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> dog;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getName</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> name;
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;People{&quot;</span> +
+                <span class="hljs-string">&quot;cat=&quot;</span> + cat +
+                <span class="hljs-string">&quot;, dog=&quot;</span> + dog +
+                <span class="hljs-string">&quot;, name=&apos;&quot;</span> + name + <span class="hljs-string">&apos;\&apos;&apos;</span> +
+                <span class="hljs-string">&apos;}&apos;</span>;
+    }
+}
+</code></pre>
+<ul>
+<li><strong>&#x53EF;&#x4EE5;&#x7A7A;&#x503C;&#x6240;&#x4EE5;&#x4E0D;&#x4E00;&#x5B9A;&#x8981;&#x8A2D;&#x5B9A; cat &#x8207; dog &#x7684; bean</strong></li>
+</ul>
+<pre><code class="lang-xml"><span class="php"><span class="hljs-meta">&lt;?</span>xml version=<span class="hljs-string">&quot;1.0&quot;</span> encoding=<span class="hljs-string">&quot;UTF-8&quot;</span><span class="hljs-meta">?&gt;</span></span>
+<span class="hljs-tag">&lt;<span class="hljs-name">beans</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">&quot;http://www.springframework.org/schema/beans&quot;</span>
+       <span class="hljs-attr">xmlns:xsi</span>=<span class="hljs-string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+       <span class="hljs-attr">xmlns:context</span>=<span class="hljs-string">&quot;http://www.springframework.org/schema/context&quot;</span>
+       <span class="hljs-attr">xmlns:aop</span>=<span class="hljs-string">&quot;http://www.springframework.org/schema/aop&quot;</span>
+       <span class="hljs-attr">xsi:schemaLocation</span>=<span class="hljs-string">&quot;http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd&quot;</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- &#x958B;&#x555F;&#x8A3B;&#x89E3;&#x7684;&#x652F;&#x6301; --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">context:annotation-config</span>/&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">bean</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;people&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;com.kuang.pojo.People&quot;</span>/&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">beans</span>&gt;</span>
+</code></pre>
+<ul>
+<li><strong>MyTest.java</strong></li>
+</ul>
+<pre><code class="lang-java"><span class="hljs-meta">@Test</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">test2</span><span class="hljs-params">()</span></span>{
+    ApplicationContext context = <span class="hljs-keyword">new</span> ClassPathXmlApplicationContext(<span class="hljs-string">&quot;beans2.xml&quot;</span>);
+    People people = context.getBean(<span class="hljs-string">&quot;people&quot;</span>, People.class);
+    System.out.println(people.toString());
+}
+</code></pre>
+<ul>
+<li>&#x57F7;&#x884C;&#x7D50;&#x679C;</li>
+</ul>
+<pre><code class="lang-cs">People{cat=<span class="hljs-keyword">null</span>, dog=<span class="hljs-keyword">null</span>, name=<span class="hljs-string">&apos;null&apos;</span>}
+
+Process finished with exit code <span class="hljs-number">0</span>
+</code></pre>
+<h3 id="8-5-5&#x3001;resource-">8-5-5&#x3001;@Resource <span id="s7"></span></h3>
+<ul>
+<li><strong>&#x4FEE;&#x6539; People.java</strong></li>
+</ul>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">People</span> </span>{
+    <span class="hljs-meta">@Resource</span>
+    <span class="hljs-keyword">private</span> Cat cat;
+}
+</code></pre>
+<ul>
+<li><strong>&#x4FEE;&#x6539; bean.xml</strong></li>
+</ul>
+<pre><code class="lang-xml"><span class="php"><span class="hljs-meta">&lt;?</span>xml version=<span class="hljs-string">&quot;1.0&quot;</span> encoding=<span class="hljs-string">&quot;UTF-8&quot;</span><span class="hljs-meta">?&gt;</span></span>
+<span class="hljs-tag">&lt;<span class="hljs-name">beans</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">&quot;http://www.springframework.org/schema/beans&quot;</span>
+       <span class="hljs-attr">xmlns:xsi</span>=<span class="hljs-string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+       <span class="hljs-attr">xmlns:context</span>=<span class="hljs-string">&quot;http://www.springframework.org/schema/context&quot;</span>
+       <span class="hljs-attr">xsi:schemaLocation</span>=<span class="hljs-string">&quot;http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd&quot;</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- &#x958B;&#x555F;&#x8A3B;&#x89E3;&#x7684;&#x652F;&#x6301; --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">context:annotation-config</span>/&gt;</span>
+    <span class="hljs-comment">&lt;!-- 
+        &#x932F;&#x8AA4;:
+            1. &#x539F;&#x56E0;&#x662F;&#x56E0;&#x70BA;&#x6709;&#x5169;&#x500B; Cat (&#x53EA;&#x80FD;&#x4E00;&#x500B; Cat &#x985E;&#x5225;&#xFF0C;&#x6216;&#x7B26;&#x5408;&#x898F;&#x5247; 2)
+            2. &#x5BA3;&#x544A;&#x7684; cat &#x7121;&#x6CD5;&#x8207; bean &#x7684; id &#x5C0D;&#x61C9;&#x4E0A; (private Cat cat &#x8981;&#x7B49;&#x65BC; id=&quot;cat&quot;)
+    --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">bean</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;cat1&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;com.kuang.pojo.Cat&quot;</span>/&gt;</span> 
+    <span class="hljs-tag">&lt;<span class="hljs-name">bean</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;cat11&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;com.kuang.pojo.Cat&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">bean</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;people&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;com.kuang.pojo.People&quot;</span>/&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">beans</span>&gt;</span>
+</code></pre>
+<h3 id="8-5-6&#x3001;&#x8A3B;&#x89E3;&#x5BE6;&#x73FE;&#x81EA;&#x52D5;&#x88DD;&#x914D;&#x7E3D;&#x7D50;-">8-5-6&#x3001;&#x8A3B;&#x89E3;&#x5BE6;&#x73FE;&#x81EA;&#x52D5;&#x88DD;&#x914D;&#x7E3D;&#x7D50; <span id="s8"></span></h3>
+<ul>
+<li><strong>project &#x4E4B; pom.xml &#x7684; &#x5E38;&#x7528;&#x4F9D;&#x8CF4;</strong></li>
+</ul>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">dependencies</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-webmvc<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>5.3.6<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>junit<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>junit<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>4.12<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">dependencies</span>&gt;</span>
+</code></pre>
+<ul>
+<li><strong>&#x8A3B;&#x89E3;&#x8AAA;&#x660E;</strong><ul>
+<li><strong>@Autowired: &#x81EA;&#x52D5;&#x88DD;&#x914D;&#x901A;&#x904E;&#x985E;&#x578B;&#xFF0C;&#x540D;&#x5B57;</strong><ul>
+<li><strong>&#x5982;&#x679C; Autowired &#x4E0D;&#x80FD;&#x552F;&#x4E00;&#x81EA;&#x52D5;&#x914D;&#x4E0A;&#x5C6C;&#x6027;&#xFF0C;&#x5247;&#x9700;&#x8981;&#x901A;&#x904E; @Qualifier(value=&quot;xxx&quot;) &#x53BB;&#x914D;&#x5408; @Autowired &#x7684;&#x4F7F;&#x7528;&#xFF0C;&#x6307;&#x5B9A;&#x4E00;&#x500B;&#x552F;&#x4E00;&#x7684; bean &#x5C0D;&#x8C61;&#x6CE8;&#x5165; !</strong></li>
+</ul>
+</li>
+<li><strong>@Nullable: &#x5B57;&#x6BB5;&#x6A19;&#x8A18;&#x4E86;&#x9019;&#x500B;&#x8A3B;&#x89E3;&#xFF0C;&#x8AAA;&#x660E;&#x9019;&#x500B;&#x5B57;&#x6BB5;&#x53EF;&#x4EE5;&#x70BA; null</strong></li>
+<li><strong>@Resource: &#x81EA;&#x52D5;&#x88DD;&#x914D;&#x901A;&#x904E;&#x540D;&#x5B57;&#x3001;&#x985E;&#x578B;</strong></li>
+<li><strong>@Component: &#x7D44;&#x4EF6;&#xFF0C;&#x653E;&#x5728;&#x985E;&#x4E0A;&#xFF0C;&#x8AAA;&#x660E;&#x9019;&#x500B;&#x985E;&#x500D; Spring &#x7BA1;&#x7406;&#x4E86;&#xFF0C;&#x5C31;&#x662F; bean !</strong></li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li>&#x53C3;&#x8003;&#x72C2;&#x795E;&#x5F71;&#x7247; (12-13)</li>
+</ul>
+
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../07、Bean的作用域/07、Bean的作用域.html" class="navigation navigation-prev " aria-label="Previous page: 07、Bean的作用域">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../09、Spring使用註解開發/09、Spring使用註解開發.html" class="navigation navigation-next " aria-label="Next page: 09、Spring使用註解開發">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"08、Bean的自動裝配","level":"1.2.8","depth":2,"next":{"title":"09、Spring使用註解開發","level":"1.2.9","depth":2,"path":"【狂神说Java】Spring5最新完整教程IDEA版通俗易懂/09、Spring使用註解開發/09、Spring使用註解開發.md","ref":"./【狂神说Java】Spring5最新完整教程IDEA版通俗易懂/09、Spring使用註解開發/09、Spring使用註解開發.md","articles":[]},"previous":{"title":"07、Bean的作用域","level":"1.2.7","depth":2,"path":"【狂神说Java】Spring5最新完整教程IDEA版通俗易懂/07、Bean的作用域/07、Bean的作用域.md","ref":"./【狂神说Java】Spring5最新完整教程IDEA版通俗易懂/07、Bean的作用域/07、Bean的作用域.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["-search","search-pro","back-to-top-button","code","pageview-count","popup"],"pluginsConfig":{"search-pro":{"cutWordLib":"nodejieba","defineWord":["小需求","基础建设"]},"popup":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"pageview-count":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"【狂神说Java】Spring5最新完整教程IDEA版通俗易懂/08、Bean的自動裝配/08、Bean的自動裝配.md","mtime":"2021-05-12T15:39:56.066Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-12T16:08:10.787Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
