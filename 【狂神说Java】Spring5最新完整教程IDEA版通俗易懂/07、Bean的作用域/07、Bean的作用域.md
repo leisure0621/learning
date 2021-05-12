@@ -40,7 +40,7 @@ public class MyTest {
     @Test
     public void test2(){
         ApplicationContext context = new ClassPathXmlApplicationContext("userBeans.xml");
-        // 原型模式，每次去 get 的時候會產生一個新的對象
+        // 單例模式，每次去 get 的時候都是同一個對象
         User user = context.getBean("user2", User.class);
         User user2 = context.getBean("user2", User.class);
         System.out.println(user.hashCode());
