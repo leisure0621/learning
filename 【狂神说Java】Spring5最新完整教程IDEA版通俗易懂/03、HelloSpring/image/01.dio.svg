@@ -1,0 +1,59 @@
+<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="631px" height="121px" viewBox="-0.5 -0.5 631 121" content="&lt;mxfile&gt;&lt;diagram id=&quot;yQ-2X_u-KOtnS5rJKMLp&quot; name=&quot;Page-1&quot;&gt;7VfJktowEP0aHUl5ASMfbcYkl5w45CxsAa7IliOLAfL16ZbkjS0zh1QlU5mawu3Xi3qVJRKuqvNnxZrDV1lwQQKvOJPwhQSB73shPBC5WGQZexbYq7JwQgOwKX9yB3Zix7Lg7URQSyl02UzBXNY1z/UEY0rJ01RsJ8V01Ybt+Q2wyZm4Rb+VhT5YlAbLAf/Cy/2hW9mPYsupWCfsImkPrJCnERRmJFwpKbWlqvOKC0xelxert37A7R1TvNZvUQiswisTRxcbCSIBqqlmWwgXcggKbcPyst4bgejHEZ1LvYF0Ug0riudSRakmXKHVhL+VquBTEX8i0OqLq0EHGjdngl3kEV4TrGZ55gU8rcZO1nrWmg5Cpu81esrbsaoUF8sFs6xqgOmMM1UycQ326idbelT0mnMP2yBmuRSCNa1bt3+bSllmLWs+DjPau6cpBKjulTw2d/DBiXHGPO+psbtKC+zdR0rQPo+c0FsJQ3wNqrulOriRwJADHzP2aEFd3DUgX7naCRwXNHEoi4LXfUL77jPmTT1C8zumrSiY0SVM84yJcl9bja3UWlZDeVj+HQOuCyykVF1/hDvz9/YWauVR5Vj2ltUtuqnkw4a67lX/uldPowxucdPquFMfw/k8XgytpvlZj0PNYW/g6k72s4gklMQxyWKS+ISuRg2AJflfpD9QpNsqUJIk+A/liCmh2dMqIKg+wgBWYE3wj13bTaMwQ3/ZVP1zma+lqvC7/K7c+5+QDzNFY0INEa+QzpYkTgidu00vzpCgIUlfzCSCvG+IkMSALAilBE813pYzUwHLA01QA4kED1Dghu+NirrtJzT4nRcjw7duGB2QQ8LHnQH8STKSxkjAvg27N3oISGqINYmjp+6E1p1bK31Qd/wCX1KSrs0KS5KCO3OSZoRGiEBu4Mxmt65kbVjURLrAX5o6GWrCAklcY03SFX5tYDFYKbV2MoP00ZhNERcFh+YuULcWeL/APL17m0Tw3vkFcXv67fBgMpQBflEBPx1KzTdwNkb4BFcd3GN1JeDN79Vw4vj54fHc7w/9cFvisuJagT+eU6DumuDuSX7o3ocDXBB12GF84+juF8zddPa96eEyAIS7D3Svw73D8Ea3tzD7BQ==&lt;/diagram&gt;&lt;/mxfile&gt;">
+    <defs/>
+    <g>
+        <rect x="0" y="0" width="630" height="120" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe flex-start; width: 628px; height: 1px; padding-top: 7px; margin-left: 2px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: left; ">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                <table cellspacing="0" cellpadding="0" dir="ltr" border="1" style="table-layout: fixed ; font-size: 10pt ; font-family: &quot;arial&quot; ; width: 0px ; border-collapse: collapse ; border: none">
+                                    <colgroup>
+                                        <col width="100"/>
+                                        <col width="527"/>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr style="height: 21px">
+                                            <td style="overflow: hidden ; padding: 2px 3px 2px 3px ; vertical-align: bottom ; background-color: #ffffff ; font-family: &quot;source sans pro&quot; ; font-size: 11pt ; font-weight: bold ; color: #34495e ; text-align: center">
+                                                標題
+                                            </td>
+                                            <td style="overflow: hidden ; padding: 2px 3px 2px 3px ; vertical-align: bottom ; background-color: #ffffff ; font-family: &quot;source sans pro&quot; ; font-size: 11pt ; font-weight: bold ; color: #34495e">
+                                                說明
+                                            </td>
+                                        </tr>
+                                        <tr style="height: 21px">
+                                            <td style="overflow: hidden ; padding: 2px 3px 2px 3px ; vertical-align: middle ; background-color: #ffffff ; font-family: &quot;source sans pro&quot; ; font-size: 11pt ; font-weight: bold ; color: #34495e">
+                                                Spring
+                                            </td>
+                                            <td style="overflow: hidden ; padding: 2px 3px 2px 3px ; vertical-align: middle ; background-color: #ffffff ; font-family: &quot;source sans pro&quot; ; font-size: 11pt ; font-weight: normal ; color: #34495e">
+                                                1. 所有的類都要裝到 bean 裡面
+                                                <br/>
+                                                <br/>
+                                                2. 所有的 bean 都要通過容器去取
+                                                <br/>
+                                                <br/>
+                                                3. 容器裡的 bean 拿出來就是一個對象，然後去調用就好
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="2" y="19" fill="#000000" font-family="Helvetica" font-size="12px">
+                    標題說明Spring1. 所有的類都要裝到 bean 裡面...
+                </text>
+            </switch>
+        </g>
+    </g>
+    <switch>
+        <g requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"/>
+        <a transform="translate(0,-5)" xlink:href="https://www.diagrams.net/doc/faq/svg-export-text-problems" target="_blank">
+            <text text-anchor="middle" font-size="10px" x="50%" y="100%">
+                Viewer does not support full SVG 1.1
+            </text>
+        </a>
+    </switch>
+</svg>

@@ -1,0 +1,327 @@
+:root {
+  --code-highlight: rgba(255, 235, 59, 0.8);
+  --code-public: #525252;
+  --theme-green: #42b983;
+}
+* {
+  font-family: 微软正黑体, 微软雅黑;
+}
+/* 
+gitbook-link: gitbook宣傳導航
+treeview__container-title: 目錄
+ */
+.treeview__container-title,
+.gitbook-link {
+  display: none !important;
+}
+/* 底線顏色 */
+u {
+  border-bottom: 2px solid #42b983;
+  text-decoration: none;
+}
+/* markdown標題 */
+.md-title {
+  text-decoration: none !important;
+}
+/* 備註區塊樣式 */
+.markdown-preview blockquote {
+  border-width: 1px 1px 1px 4px;
+  border-color: #ddd #ddd #ddd #42b983;
+  border-style: solid;
+  background-color: transparent;
+  color: black;
+}
+/* 目錄 */
+h1#top + ul {
+  padding: 0;
+}
+h1#top + ul li {
+  list-style-type: none;
+}
+/* 滾軸 */
+.book
+  .book-body
+  .page-wrapper
+  .page-inner
+  section.normal
+  pre::-webkit-scrollbar,
+.book.with-summary .book-summary::-webkit-scrollbar {
+  width: 8px;
+  background-color: transparent;
+}
+.book
+  .book-body
+  .page-wrapper
+  .page-inner
+  section.normal
+  pre::-webkit-scrollbar-thumb,
+.book.with-summary .book-summary::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #ececec;
+}
+.book
+  .book-body
+  .page-wrapper
+  .page-inner
+  section.normal
+  pre::-webkit-scrollbar-track,
+.book.with-summary .book-summary::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: transparent;
+}
+.book .book-summary {
+  background: transparent;
+}
+/* 筆記用色彩 */
+.markdown-section pre code {
+  color: #333;
+}
+.markdown-section code {
+  background: var(--code-highlight);
+  color: black;
+}
+bikao {
+  color: #f44336;
+  font-size: 0.75rem;
+  animation: light-shadow 1.5s;
+  animation-iteration-count: infinite;
+}
+/* 動畫 */
+@keyframes light-shadow {
+  0% {
+  }
+  50% {
+    color: #f39892;
+  }
+  100% {
+  }
+}
+/* list下添加區隔 */
+.page-inner ul li:last-child {
+  margin-bottom: 15px;
+}
+.markdown-section blockquote,
+.markdown-section dl,
+.markdown-section ol,
+.markdown-section p,
+.markdown-section table,
+.markdown-section ul {
+  margin-bottom: 1em;
+}
+/* Table 設定*/
+@media screen and (max-width: 768px) {
+  .markdown-section table {
+    display: block !important;
+  }
+}
+/* Theme 設定 */
+.markdown-section hr {
+  height: 1px;
+}
+sup.footnote-ref a {
+  font-size: 0.75rem;
+}
+.gray-block {
+  background: #ddd;
+}
+/* 主體色 */
+.book-summary ul.summary li.active > a,
+.markdown-section a {
+  color: var(--theme-green);
+  font-weight: 600;
+}
+.book .book-body .page-wrapper .page-inner section.normal pre .hljs-variable,
+.book .book-body .page-wrapper .page-inner section.normal code .hljs-variable,
+.book .book-body .page-wrapper .page-inner section.normal pre .hljs-attribute,
+.book .book-body .page-wrapper .page-inner section.normal code .hljs-attribute,
+.book .book-body .page-wrapper .page-inner section.normal pre .hljs-tag,
+.book .book-body .page-wrapper .page-inner section.normal code .hljs-tag,
+.book .book-body .page-wrapper .page-inner section.normal pre .hljs-regexp,
+.book .book-body .page-wrapper .page-inner section.normal code .hljs-regexp,
+.book .book-body .page-wrapper .page-inner section.normal pre .hljs-deletion,
+.book .book-body .page-wrapper .page-inner section.normal code .hljs-deletion,
+.book
+  .book-body
+  .page-wrapper
+  .page-inner
+  section.normal
+  pre
+  .ruby
+  .hljs-constant,
+.book
+  .book-body
+  .page-wrapper
+  .page-inner
+  section.normal
+  code
+  .ruby
+  .hljs-constant,
+.book
+  .book-body
+  .page-wrapper
+  .page-inner
+  section.normal
+  pre
+  .xml
+  .hljs-tag
+  .hljs-title,
+.book
+  .book-body
+  .page-wrapper
+  .page-inner
+  section.normal
+  code
+  .xml
+  .hljs-tag
+  .hljs-title,
+.book .book-body .page-wrapper .page-inner section.normal pre .xml .hljs-pi,
+.book .book-body .page-wrapper .page-inner section.normal code .xml .hljs-pi,
+.book
+  .book-body
+  .page-wrapper
+  .page-inner
+  section.normal
+  pre
+  .xml
+  .hljs-doctype,
+.book
+  .book-body
+  .page-wrapper
+  .page-inner
+  section.normal
+  code
+  .xml
+  .hljs-doctype,
+.book
+  .book-body
+  .page-wrapper
+  .page-inner
+  section.normal
+  pre
+  .html
+  .hljs-doctype,
+.book
+  .book-body
+  .page-wrapper
+  .page-inner
+  section.normal
+  code
+  .html
+  .hljs-doctype,
+.book .book-body .page-wrapper .page-inner section.normal pre .css .hljs-id,
+.book .book-body .page-wrapper .page-inner section.normal code .css .hljs-id,
+.book .book-body .page-wrapper .page-inner section.normal pre .css .hljs-class,
+.book .book-body .page-wrapper .page-inner section.normal code .css .hljs-class,
+.book .book-body .page-wrapper .page-inner section.normal pre .css .hljs-pseudo,
+.book
+  .book-body
+  .page-wrapper
+  .page-inner
+  section.normal
+  code
+  .css
+  .hljs-pseudo {
+  color: #2973b7;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal pre .hljs-string,
+.book .book-body .page-wrapper .page-inner section.normal code .hljs-string,
+.book .book-body .page-wrapper .page-inner section.normal pre .hljs-value,
+.book .book-body .page-wrapper .page-inner section.normal code .hljs-value,
+.book .book-body .page-wrapper .page-inner section.normal pre .hljs-inheritance,
+.book
+  .book-body
+  .page-wrapper
+  .page-inner
+  section.normal
+  code
+  .hljs-inheritance,
+.book .book-body .page-wrapper .page-inner section.normal pre .hljs-header,
+.book .book-body .page-wrapper .page-inner section.normal code .hljs-header,
+.book .book-body .page-wrapper .page-inner section.normal pre .hljs-addition,
+.book .book-body .page-wrapper .page-inner section.normal code .hljs-addition,
+.book
+  .book-body
+  .page-wrapper
+  .page-inner
+  section.normal
+  pre
+  .ruby
+  .hljs-symbol,
+.book
+  .book-body
+  .page-wrapper
+  .page-inner
+  section.normal
+  code
+  .ruby
+  .hljs-symbol,
+.book .book-body .page-wrapper .page-inner section.normal pre .xml .hljs-cdata,
+.book
+  .book-body
+  .page-wrapper
+  .page-inner
+  section.normal
+  code
+  .xml
+  .hljs-cdata {
+  color: var(--theme-green);
+}
+.book-summary ul.summary li span,
+#book-search-results .search-results .has-results .search-results-item a {
+  color: var(--theme-green);
+}
+.book .book-body .page-wrapper .page-inner section.normal pre .hljs-keyword,
+.book .book-body .page-wrapper .page-inner section.normal code .hljs-keyword,
+.book
+  .book-body
+  .page-wrapper
+  .page-inner
+  section.normal
+  pre
+  .javascript
+  .hljs-function,
+.book
+  .book-body
+  .page-wrapper
+  .page-inner
+  section.normal
+  code
+  .javascript
+  .hljs-function {
+  color: #e96900;
+}
+/* .book .book-body .page-wrapper .page-inner section.normal pre .hljs-comment,
+.book .book-body .page-wrapper .page-inner section.normal code .hljs-comment, */
+.book .book-body .page-wrapper .page-inner section.normal pre .hljs-title,
+.book .book-body .page-wrapper .page-inner section.normal code .hljs-title {
+  color: var(--code-public);
+}
+.book .book-body .page-wrapper .page-inner section.normal pre .hljs-number,
+.book .book-body .page-wrapper .page-inner section.normal code .hljs-number,
+.book
+  .book-body
+  .page-wrapper
+  .page-inner
+  section.normal
+  pre
+  .hljs-preprocessor,
+.book
+  .book-body
+  .page-wrapper
+  .page-inner
+  section.normal
+  code
+  .hljs-preprocessor,
+.book .book-body .page-wrapper .page-inner section.normal pre .hljs-pragma,
+.book .book-body .page-wrapper .page-inner section.normal code .hljs-pragma,
+.book .book-body .page-wrapper .page-inner section.normal pre .hljs-built_in,
+.book .book-body .page-wrapper .page-inner section.normal code .hljs-built_in,
+.book .book-body .page-wrapper .page-inner section.normal pre .hljs-literal,
+.book .book-body .page-wrapper .page-inner section.normal code .hljs-literal,
+.book .book-body .page-wrapper .page-inner section.normal pre .hljs-params,
+.book .book-body .page-wrapper .page-inner section.normal code .hljs-params,
+.book .book-body .page-wrapper .page-inner section.normal pre .hljs-constant,
+.book .book-body .page-wrapper .page-inner section.normal code .hljs-constant {
+  color: var(--code-public);
+}
