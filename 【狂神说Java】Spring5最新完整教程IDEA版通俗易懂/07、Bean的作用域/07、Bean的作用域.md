@@ -109,7 +109,11 @@ false
 - **這些只能在 web 開發中使用到!** (配置 **[監聽器...](https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#beans-factory-scopes-other-web-configuration)** 等等)
 
 ---
-- 參考狂神影片 (11)
+
+- [【狂神說Java】11、Bean 的作用域](https://www.bilibili.com/video/BV1WE411d7Dv?p=11&spm_id_from=pageDriver)
+
+---
+
 - [單例模式 Singleton](https://skyyen999.gitbooks.io/-study-design-pattern-in-java/content/singleton.html)
 - [【D6 - 三國鼎立時代】三大前端時代 -- 為何我選擇了Vue?](https://ithelp.ithome.com.tw/articles/10234520)
 - [[翻譯] ANGULAR VS REACT VS VUE](https://terrylee7788.wordpress.com/2019/10/24/angular-vs-react-vs-vue/)

@@ -163,5 +163,8 @@ public class MyTest {
 
 ---
 
-- 參考狂神影片 (7)
+- [【狂神說Java】7、Spring 配置說明](https://www.bilibili.com/video/BV1WE411d7Dv?p=7&spm_id_from=pageDriver)
+
+---
+
 - [建構子（英語： Constructor，有時簡稱 ctor），別稱：構造方法、建構函式、建構子](https://zh.wikipedia.org/wiki/%E6%9E%84%E9%80%A0%E5%99%A8)

@@ -322,7 +322,11 @@ public class MyTest {
 
 ---
 
-- 參考狂神影片 (14-15)
-- 參考狂神影片 (16) ， 總結
+- [【狂神說Java】14、Spring 註解開發](https://www.bilibili.com/video/BV1WE411d7Dv?p=14&spm_id_from=pageDriver)
+- [【狂神說Java】15、使用 JavaConfig 進行配置](https://www.bilibili.com/video/BV1WE411d7Dv?p=15&spm_id_from=pageDriver)
+- [【狂神說Java】16、上周內容回顧](https://www.bilibili.com/video/BV1WE411d7Dv?p=16&spm_id_from=pageDriver)
+
+---
+
 - [SSM （SSM 框架集）](https://baike.baidu.com/item/SSM/18801167)
 - [Java-based Container Configuration](https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#beans-java)

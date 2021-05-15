@@ -140,4 +140,4 @@ public class MyTest {
 
 ---
 
-- 參考狂神影片 (6)
+- [【狂神說Java】6、IOC創建對象方式](https://www.bilibili.com/video/BV1WE411d7Dv?p=6&spm_id_from=pageDriver)

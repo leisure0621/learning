@@ -671,4 +671,5 @@ public class People {
 
 ---
 
-- 參考狂神影片 (12-13)
+- [【狂神說Java】12、自動裝配 Bean](https://www.bilibili.com/video/BV1WE411d7Dv?p=12&spm_id_from=pageDriver)
+- [【狂神說Java】13、註解實現自動裝配](https://www.bilibili.com/video/BV1WE411d7Dv?p=13&spm_id_from=pageDriver)

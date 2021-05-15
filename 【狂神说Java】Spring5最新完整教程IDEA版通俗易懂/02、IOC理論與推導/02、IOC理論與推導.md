@@ -260,4 +260,5 @@ public void setUserDao(UserDao userDao){
 
 ---
 
-- 參考狂神影片 (3-4)
+- [【狂神說Java】3、IOC 理論推導](https://www.bilibili.com/video/BV1WE411d7Dv?p=3&spm_id_from=pageDriver)
+- [【狂神說Java】4、IOC 本質](https://www.bilibili.com/video/BV1WE411d7Dv?p=4&spm_id_from=pageDriver)

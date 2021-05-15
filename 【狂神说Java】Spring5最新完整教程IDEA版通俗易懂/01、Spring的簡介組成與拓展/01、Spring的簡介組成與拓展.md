@@ -51,7 +51,8 @@
 ## 1-3、Spring 的組成<span id="s4"/>
 
 - [Spring 由以下七大核心模块組成](./doc/Spring_七大核心模块.html)
-  <img src="./image/02.dio.svg"/>
+
+<img src="./image/02.dio.svg"/>
 
 ## 1-5、Spring 的拓展<span id="s5"/>
 
@@ -67,7 +68,12 @@
 
 ---
 
-- 參考狂神影片 (1-2)
+
+- [【狂神說Java】1、Spring 簡介](https://www.bilibili.com/video/BV1WE411d7Dv?p=1&spm_id_from=pageDriver)
+- [【狂神說Java】2、Spring 組成及拓展](https://www.bilibili.com/video/BV1WE411d7Dv?p=2&spm_id_from=pageDriver)
+
+---
+
 - [Spring Framework](https://zh.wikipedia.org/wiki/Spring_Framework)
 - [spring框架](https://baike.baidu.com/item/spring%E6%A1%86%E6%9E%B6/2853288)
 - [【Spring】Spring简介、组成及拓展](https://blog.csdn.net/Aibiabcheng/article/details/116012859)
